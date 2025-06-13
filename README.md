@@ -1,137 +1,125 @@
 # 🎮 GamePocket
 
-GamePocket é um aplicativo Android para consulta e gerenciamento de jogos favoritos, consumindo a API da RAWG.io. O projeto possui uma arquitetura modular, incluindo integração com banco de dados local Room e comunicação via Retrofit.
+GamePocket is an Android application for browsing and managing favorite games, utilizing the RAWG.io API. The project features a modular architecture, including integration with the local Room database and communication via Retrofit.
 
-## 📱 Funcionalidades
-
-- Tela inicial com listagem de jogos populares.
-- Pesquisa de jogos por nome.
-- Detalhes completos de cada jogo, incluindo descrição, imagem e data de lançamento.
-- Lista de jogos recomendados dentro da tela de detalhes.
-- Salvamento de jogos favoritos no banco de dados local (Room).
-- Visualização da lista de favoritos.
-- Navegação entre telas utilizando `Navigation Component`.
-
----
-
-## 🛠️ Tecnologias e Bibliotecas Utilizadas
-
-- **Linguagem:** Kotlin
-- **Arquitetura:** MVVM (Model - View - ViewModel)
-- **Networking:** Retrofit + Gson
-- **Banco de Dados:** Room Database
-- **Coroutines & Flow:** Para operações assíncronas e reatividade.
-- **Navigation Component:** Para gerenciamento da navegação.
-- **ViewBinding:** Para manipulação das views.
-- **Glide:** Para carregamento de imagens.
-- **Material Design 3:** Para componentes visuais modernos.
+## 📱Features
+	•	Home screen displaying a list of popular games.
+	•	Search for games by name.
+	•	Detailed view of each game, including description, image, and release date.
+	•	Recommended games list within the details screen.
+	•	Saving favorite games to the local database (Room).
+	•	Viewing the list of favorite games.
+	•	Screen navigation using the Navigation Component.
 
 ---
 
-## 🌐 API Utilizada
-
-- [RAWG.io](https://api.rawg.io/docs/) - Plataforma de dados de jogos.
-
-Endpoints implementados:
-- `GET /games` - Listagem de jogos
-- `GET /games/{id}` - Detalhes de um jogo específico
-- `GET /games/{id}/suggested` - Lista de jogos recomendados
-
----
-
-## ✅ O Que Já Foi Feito
-
-### Conexão com a API
-- Retrofit configurado e testado.
-- Endpoints de listagem, detalhes e recomendados integrados.
-- Suporte a parâmetros de busca e ordenação.
-- Log detalhado no Logcat para debug.
-
-### Banco de Dados Local (Room)
-- Criação do banco de dados local.
-- Entidade de jogos favoritos configurada.
-- DAO com métodos de inserção, remoção e listagem.
-- Integração do repositório com Room.
-
-### Fragments e ViewModels
-- **HomeFragment:** Lista de jogos populares.
-- **SearchFragment:** Busca de jogos via API.
-- **DetailFragment:** Detalhes completos do jogo e jogos recomendados.
-- **FavoriteFragment:** Listagem de jogos favoritos armazenados localmente.
-
-### Adapters e UI
-- RecyclerView com adapter configurado.
-- ViewBinding para manipulação de views.
-- Glide para carregamento de imagens.
-- Botão de favoritar usando `IconToggleButton` (Compose no futuro).
-
-### Navegação
-- `Navigation Component` configurado com `nav_graph.xml`.
-- Fluxo completo: Home ➜ Detalhe ➜ Favoritar ➜ Lista de Favoritos.
+## 🛠️ Technologies and Libraries Used
+	•	Language: Kotlin
+	•	Architecture: MVVM (Model - View - ViewModel)
+	•	Networking: Retrofit + Gson
+	•	Database: Room Database
+	•	Coroutines & Flow: For asynchronous operations and reactivity
+	•	Navigation Component: For navigation management
+	•	ViewBinding: For view handling
+	•	Glide: For image loading
+	•	Material Design 3: For modern UI components
 
 ---
 
-## 🚀 Próximos Passos (Para o Time)
+## 🌐 API Used
+	•	RAWG.io – Game data platform.
 
-- **Melhorar UI/UX:**
-    - Aplicar Material Design 3 completo.
-    - Criar telas responsivas para tablets.
-    - Implementar animações e transições.
+Implemented endpoints:
+	•	GET /games – Game list
+	•	GET /games/{id} – Details of a specific game
+	•	GET /games/{id}/suggested – List of recommended games
 
-- **Tratamento de Erros:**
-    - Criar telas de erro (ex: sem internet, erro 404).
-    - Adicionar loading (Shimmer ou ProgressBar).
+⸻
 
-- **Paginação:**
-    - Implementar paginação infinita na Home e Busca.
+✅ What’s Been Done
 
-- **Favoritos:**
-    - Adicionar feedback visual (Snackbar ou Toast) ao favoritar/desfavoritar.
+API Integration
+	•	Retrofit configured and tested
+	•	Game listing, details, and recommended endpoints integrated
+	•	Support for search and sorting parameters
+	•	Detailed logging in Logcat for debugging
 
-- **Testes:**
-    - Criar testes unitários para ViewModels e Repository.
-    - Criar testes instrumentados para fluxo completo.
+Local Database (Room)
+	•	Local database created
+	•	Favorite games entity set up
+	•	DAO with insert, delete, and query methods
+	•	Repository integrated with Room
 
-- **Refinamento de Código:**
-    - Criar uma camada de `UiState` para gerenciar estados (Loading, Success, Error).
-    - Revisar logs e remover excessos.
+Fragments and ViewModels
+	•	HomeFragment: Displays popular games
+	•	SearchFragment: Search for games via API
+	•	DetailFragment: Full game details and recommended games
+	•	FavoriteFragment: List of locally stored favorite games
 
----
+Adapters and UI
+	•	RecyclerView with adapter configured
+	•	ViewBinding used for view handling
+	•	Glide for image loading
+	•	Favorite button using IconToggleButton (with future Compose migration)
 
-## ⚠️ Observações Importantes
+Navigation
+	•	Navigation Component configured with nav_graph.xml
+	•	Complete flow: Home ➜ Detail ➜ Favorite ➜ Favorites List
 
-- A chave da API (`Constants.API_KEY`) deve ser protegida. Sugere-se migrar para uma solução segura no futuro (exemplo: Remote Config ou Keystore).
-- O projeto já está funcional para continuar o desenvolvimento a partir da UI.
+⸻
 
----
+🚀 Next Steps (For the Team)
+	•	Improve UI/UX:
+	•	Fully apply Material Design 3
+	•	Create responsive layouts for tablets
+	•	Implement animations and transitions
+	•	Error Handling:
+	•	Create error screens (e.g., no internet, 404 error)
+	•	Add loading indicators (Shimmer or ProgressBar)
+	•	Pagination:
+	•	Implement infinite scroll in Home and Search screens
+	•	Favorites:
+	•	Add visual feedback (Snackbar or Toast) when favoriting/unfavoriting
+	•	Testing:
+	•	Create unit tests for ViewModels and Repository
+	•	Create instrumentation tests for full flow
+	•	Code Refinement:
+	•	Implement a UiState layer to handle states (Loading, Success, Error)
+	•	Review and clean up excessive logging
 
-## 📚 Referências
+⸻
 
-- [Documentação RAWG.io](https://api.rawg.io/docs/)
-- [Arquitetura MVVM com Flow](https://developer.android.com/kotlin/flow)
-- [Guia de Material Design 3](https://m3.material.io)
+⚠️ Important Notes
+	•	The API key (Constants.API_KEY) should be protected. It’s recommended to migrate to a secure solution in the future (e.g., Remote Config or Keystore).
+	•	The project is fully functional and ready for continued UI development.
 
----
+⸻
 
-## 🧑‍💻 Desenvolvido por
+📚 References
+	•	RAWG.io Documentation
+	•	MVVM Architecture with Flow
+	•	Material Design 3 Guide
 
-Equipe 3 HackSprint DevSpace, iniciado por [Robson Santos, Francisco Cleonis, Elieudo Silva, Geovâneo dos Santos Souza].
+⸻
 
----
+🧑‍💻 Developed by
 
-## 📦 Requisitos de Ambiente
+Team 3 HackSprint DevSpace, initiated by [Robson Santos, Francisco Cleonis, Elieudo Silva, Geovâneo dos Santos Souza].
 
-- Android Studio Flamingo ou superior
-- Kotlin 1.8+
-- MinSDK 24
-- TargetSDK 34
-- Emulador ou dispositivo físico com internet
+⸻
 
----
+📦 Environment Requirements
+	•	Android Studio Flamingo or newer
+	•	Kotlin 1.8+
+	•	MinSDK 24
+	•	TargetSDK 34
+	•	Emulator or physical device with internet access
 
-## 🏁 Como Executar
+⸻
+
+🏁 How to Run
 
 ```bash
-git clone <repositorio>
+git clone <repository>
 cd GamePocket
 ./gradlew assembleDebug
