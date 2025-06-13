@@ -26,15 +26,15 @@ GamePocket is an Android application for browsing and managing favorite games, u
 
 ---
 
-## 🌐 API Used
-	•	RAWG.io – Game data platform.
+## 🌐 API Used  
+	•	RAWG.io – Game data platform.  
 
-Implemented endpoints:
-	•	GET /games – Game list
-	•	GET /games/{id} – Details of a specific game
-	•	GET /games/{id}/suggested – List of recommended games
-
-⸻
+Implemented endpoints:  
+	•	GET /games – Game list  
+	•	GET /games/{id} – Details of a specific game  
+	•	GET /games/{id}/suggested – List of recommended games  
+  
+⸻  
 
 ✅ What’s Been Done
 
