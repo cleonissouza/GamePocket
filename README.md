@@ -33,6 +33,16 @@ Implemented endpoints:
 	•	GET /games – Game list  
 	•	GET /games/{id} – Details of a specific game  
 	•	GET /games/{id}/suggested – List of recommended games  
+
+
+## :camera_flash: Screenshots
+<img width="200" src="https://github.com/user-attachments/assets/74a74b71-1fde-4ab3-a32f-8c214bb2b077" />
+<img width="200" src="https://github.com/user-attachments/assets/03103576-764b-4332-833c-2209c279203c" />
+<img width="200" src="https://github.com/user-attachments/assets/b677be4c-8323-4246-9dd9-d77da64166e6" />
+<img width="200" src="https://github.com/user-attachments/assets/fd16600d-44cf-415d-b12d-cf5be79f4340" />
+<img width="200" src="https://github.com/user-attachments/assets/4d464969-f5e7-4107-b349-a6104bbef90a" />
+
+
   
 ⸻  
 
