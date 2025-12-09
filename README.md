@@ -104,7 +104,7 @@ Navigation
 
 🧑‍💻 Developed by  
 
-Team 3 HackSprint DevSpace, initiated by [Robson Santos, Francisco Cleonis, Elieudo Silva, Geovâneo dos Santos Souza].  
+Team 3 HackSprint DevSpace, initiated by [Robson Santos, Francisco Souza, Elieudo Silva, Geovâneo dos Santos Souza].  
 
 ⸻  
 
